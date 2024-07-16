@@ -19,37 +19,51 @@
 <body>
   <div class="root">
     <div class="white-container">
-      <h2>Mortage calculator</h2>
-      <p id="clearAll">Clear All</p>
+      <div id="heading">
+        <h3>Mortage calculator</h3>
+        <p id="clearAll">Clear All</p>
+      </div>
       <form id="data-form">
 
-        <div id="first-input">
-          <label for="mortageAmount">Mortage Amount</label>
-          <input type="text" id="mortageAmount" required>
-        </div>
+        <div id="text-form">
 
-        <div id="second-input">
-          <label for="mortageTerm">Mortage Term</label>
-          <input type="text" id="mortageTerm" required>
-        </div>
-
-        <div id="third-input">
-          <label for="intrestRate">Intrest Rate</label>
-          <input type="text" id="intrestRate" required>
-        </div>
-
-        <div id="fourth-input">
-          <div> 
-            <input type="radio" id="clac-total" name="calc-option" value="repayment">
-            <label for="clac-total">Repayment</label><br>
+          <div id="first-input" class="inputs">
+            <label for="mortageAmount" class="number-label">Mortage Amount</label>
+            <input type="text" id="mortageAmount" required>
           </div>
-          <div>
-            <input type="radio" id="clac-intrest" name="calc-option" value="intrest">
-            <label for="clac-intrest">Interest Only</label>
-          </div> 
+
+          <div id="second-input" class="inputs">
+            <label for="mortageTerm" class="number-label">Mortage Term</label>
+            <input type="text" id="mortageTerm" required>
+          </div>
+
+          <div id="third-input" class="inputs">
+            <label for="intrestRate" class="number-label">Intrest Rate</label>
+            <input type="text" id="intrestRate" required>
+          </div>
+
         </div>
 
-        <button type="submit">Calculate Reypayments</button>
+        <div id="radio-form">
+            <label>Mortage type</label>
+
+            <div> 
+              <input type="radio" id="clac-total" name="calc-option" value="repayment">
+              <label for="clac-total">Repayment</label>
+            </div>
+
+            <div>
+              <input type="radio" id="clac-intrest" name="calc-option" value="intrest">
+              <label for="clac-intrest">Interest Only</label>
+            </div> 
+
+            <button type="submit">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path fill="#133041" d="M18.75 2.25H5.25a1.5 1.5 0 0 0-1.5 1.5v16.5a1.5 1.5 0 0 0 1.5 1.5h13.5a1.5 1.5 0 0 0 1.5-1.5V3.75a1.5 1.5 0 0 0-1.5-1.5Zm-10.5 16.5a1.125 1.125 0 1 1 0-2.25 1.125 1.125 0 0 1 0 2.25Zm0-3.75a1.125 1.125 0 1 1 0-2.25 1.125 1.125 0 0 1 0 2.25ZM12 18.75a1.125 1.125 0 1 1 0-2.25 1.125 1.125 0 0 1 0 2.25ZM12 15a1.125 1.125 0 1 1 0-2.25A1.125 1.125 0 0 1 12 15Zm3.75 3.75a1.125 1.125 0 1 1 0-2.25 1.125 1.125 0 0 1 0 2.25Zm0-3.75a1.125 1.125 0 1 1 0-2.25 1.125 1.125 0 0 1 0 2.25Zm1.5-5.25a.75.75 0 0 1-.75.75h-9a.75.75 0 0 1-.75-.75V6a.75.75 0 0 1 .75-.75h9a.75.75 0 0 1 .75.75v3.75Z"/></svg>
+              <p>Calculate repayments</p>
+            </button>
+
+        </div>
+      
       </form>
     </div>
 
@@ -59,8 +73,8 @@
         provided. To adjust the results, edit the form and click "claculate
         repayments" again.
       </p>
-      <div class="result-card">
 
+      <div class="result-card">
         <div id="montly">
           <p>Your montly reypayments</p>
           <h1 id="montly-amount">£1,797.74</h1>
@@ -73,9 +87,11 @@
           <h3 id="montly-amount">£539,322.94</h3>
         </div>
       </div>
+
     </div>
 
   </div>
+  <script src="script.js"></script>
 </body>
 </html>
 
